@@ -4,12 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XBTCR | Official Token Website</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    .navbar {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+    .logo-area .nav-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+    .nav-links li {
+      margin-left: 20px;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background-color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .section {
+      padding: 3rem 2rem;
+      background-color: #fff;
+      margin: 1rem auto;
+      max-width: 800px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #000;
+      color: #fff;
+    }
+    footer a {
+      color: #0af;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
     <div class="logo-area">
-      <img src="logo.png" alt="XBTCR Logo" class="nav-logo" />
+      <img src="logo.png" alt="XBTCR Logo" class="nav-logo" onerror="this.style.display='none'" />
       <span>XBTCR</span>
     </div>
     <ul class="nav-links">
@@ -46,8 +121,11 @@
 
   <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:xbtcrtoken@gmail.com">xbtcrtoken@gmail.com</a></p>
-    <p>Follow links: <em>Coming Soon</em></p>
+    <p>📧 Email: <a href="mailto:xbtcrtoken@gmail.com">xbtcrtoken@gmail.com</a></p>
+    <p>🌐 Website: <a href="https://xbtcr.github.io" target="_blank">https://xbtcr.github.io</a></p>
+    <p>🐦 Twitter: <a href="https://twitter.com/xbtcrtoken" target="_blank">@xbtcrtoken</a></p>
+    <p>📢 Telegram: <a href="https://t.me/xbtcr_bsc" target="_blank">Join XBTCR Official</a></p>
+    <p>📝 Whitepaper Link: Available on Website</p>
   </section>
 
   <section id="privacy" class="section">
@@ -58,6 +136,7 @@
   <footer>
     <p>Contract: 0x4274c09719F4eb538682F74DB27f7DB6DE330cd9</p>
     <p>&copy; 2025 XBTCR Token. All Rights Reserved.</p>
+    <p><a href="https://twitter.com/xbtcrtoken" target="_blank">Follow us on Twitter</a></p>
   </footer>
 </body>
 </html>
