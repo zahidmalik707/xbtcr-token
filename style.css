@@ -24,7 +24,7 @@ header {
 }
 
 .logo-main, .header-logo {
-  height: 80px;
+  height: 60px;
   background-color: white;
   border-radius: 50%;
   padding: 5px;
@@ -53,10 +53,10 @@ header {
 
 /* Center Logo */
 .logo-main {
-  max-width: 280px;
+  max-width: 180px;
   margin: 2rem auto 1rem;
   display: block;
-  border-radius: 50%;
+  border-radius: 100%;
   border: none;
   box-shadow: none;
 }
