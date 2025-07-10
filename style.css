@@ -1,68 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | XBTCR</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #fff; color: #333; padding: 2rem; }
-    header { text-align: center; margin-bottom: 2rem; }
-    nav a { margin: 0 1rem; color: #000; text-decoration: none; }
-    h1 { color: #000; }
-    p { margin-bottom: 1rem; line-height: 1.8; max-width: 900px; margin-left: auto; margin-right: auto; }
-    .pdf-link { text-align: center; margin-top: 3rem; }
-    .pdf-link a { display: inline-block; background: #007bff; color: #fff; padding: 0.6rem 1.2rem; border-radius: 5px; text-decoration: none; font-weight: bold; }
-    .pdf-link a:hover { background: #0056b3; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XBTCR | Official Token Website</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="tokenomics.html">Tokenomics</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="Whitepaper.pdf" target="_blank">Whitepaper</a>
-    </nav>
-    <h1>Privacy Policy</h1>
-  </header>
-  <main>
-    <p>At XBTCR, we are committed to protecting your privacy and ensuring complete transparency in how we operate. This Privacy Policy outlines how we handle data and respect your digital rights when you engage with our project.</p>
-
-    <p><strong>1. No Personal Data Collection:</strong><br>
-    We do not collect, store, or request any personal information from users visiting our website or interacting with the XBTCR token. Your activity is entirely anonymous.</p>
-
-    <p><strong>2. Blockchain Transparency:</strong><br>
-    All transactions involving XBTCR are public, immutable, and viewable on the Binance Smart Chain (BSC). We encourage users to verify activity via BscScan for full transparency.</p>
-
-    <p><strong>3. No Cookies or Trackers:</strong><br>
-    Our website does not use cookies, tracking pixels, or analytics software. You can browse safely knowing that your behavior is not being monitored.</p>
-
-    <p><strong>4. Secure Communication:</strong><br>
-    If you choose to email us, your information will only be used to respond to your inquiry. We do not share, sell, or retain email data after correspondence is complete.</p>
-
-    <p><strong>5. Community Platforms:</strong><br>
-    Our Telegram and Twitter communities are governed by their respective platform privacy rules. We do not record or store any interaction data from these sources.</p>
-
-    <p><strong>6. No KYC Required:</strong><br>
-    XBTCR does not require Know Your Customer (KYC) procedures. Participation in the token ecosystem is permissionless and open to all.</p>
-
-    <p><strong>7. Third-Party Links:</strong><br>
-    External links on our website may lead to third-party sites. XBTCR is not responsible for the content or privacy practices of those websites. Please review their policies before interacting.</p>
-
-    <p><strong>8. Protection from Scams:</strong><br>
-    XBTCR will never contact you first or ask for private wallet keys. Always verify information using official links listed on our website or social media pages.</p>
-
-    <p><strong>9. Policy Updates:</strong><br>
-    We may revise this Privacy Policy in the future. Any updates will be clearly posted on this page with the effective date. Users are advised to review it periodically.</p>
-
-    <p>If you have questions or need more information, contact us at <a href="mailto:xbtcrtoken@gmail.com">xbtcrtoken@gmail.com</a>. Your privacy and trust mean everything to us.</p>
-
-    <div class="pdf-link">
-      <a href="Whitepaper.pdf" target="_blank">📄 Download XBTCR Whitepaper</a>
+  <nav class="navbar">
+    <div class="logo-area">
+      <img src="logo.png" alt="XBTCR Logo" class="nav-logo" />
+      <span>XBTCR</span>
     </div>
-  </main>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#tokenomics">Tokenomics</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#privacy">Privacy Policy</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <h1>Welcome to XBTCR</h1>
+    <p>Decentralized. Transparent. Trusted.</p>
+    <a href="whitepaper.pdf" class="btn">Download Whitepaper</a>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About XBTCR</h2>
+    <p>XBTCR is a community-driven token built on the Binance Smart Chain with a burned supply of 99 trillion and a final circulating supply of just 1 trillion tokens. It offers 0% tax, 18 decimals, and 100% transparency — making it a perfect choice for decentralized trading and long-term growth.</p>
+  </section>
+
+  <section id="tokenomics" class="section">
+    <h2>Tokenomics</h2>
+    <ul>
+      <li><strong>Total Supply:</strong> 100 Trillion</li>
+      <li><strong>Burned:</strong> 99 Trillion</li>
+      <li><strong>Final Supply:</strong> 1 Trillion</li>
+      <li><strong>Decimals:</strong> 18</li>
+      <li><strong>Slippage:</strong> 2%</li>
+      <li><strong>Tax:</strong> 0%</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>📧 Email: <a href="mailto:xbtcrtoken@gmail.com">xbtcrtoken@gmail.com</a></p>
+    <p>🌐 Website: <a href="https://xbtcr.github.io" target="_blank">https://xbtcr.github.io</a></p>
+    <p>🐦 Twitter: <a href="https://twitter.com/xbtcrtoken" target="_blank">@xbtcrtoken</a></p>
+    <p>📢 Telegram: <a href="https://t.me/xbtcr_bsc" target="_blank">Join XBTCR Official</a></p>
+    <p>📝 Whitepaper Link: Available on Website</p>
+  </section>
+
+  <section id="privacy" class="section">
+    <h2>Privacy & Policy</h2>
+    <p>We respect your privacy. All user data is protected and will never be shared without consent. No tracking scripts or cookies are used on this website. This site is purely informational for the XBTCR token community.</p>
+  </section>
+
+  <footer>
+    <p>Contract: 0x4274c09719F4eb538682F74DB27f7DB6DE330cd9</p>
+    <p>&copy; 2025 XBTCR Token. All Rights Reserved.</p>
+    <p><a href="https://twitter.com/xbtcrtoken" target="_blank">Follow us on Twitter</a></p>
+  </footer>
 </body>
 </html>
