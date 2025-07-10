@@ -23,11 +23,12 @@ header {
   flex-wrap: wrap;
 }
 
-.header-logo {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  border: 2px solid gold;
+.logo-main, .header-logo {
+  height: 100px;
+  width: 100px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* Navigation */
