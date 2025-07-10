@@ -58,7 +58,8 @@ header {
   margin: 2rem auto 1rem;
   display: block;
   border-radius: 50%;
-  border: 2px solid gold;
+  border: none;
+  box-shadow: none;
 }
 
 /* Description */
