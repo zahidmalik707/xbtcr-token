@@ -55,10 +55,7 @@
       text-align: center;
     }
     .hero img.hero-logo {
-      width: 150px;
-      height: auto;
-      margin-bottom: 1rem;
-      border-radius: 10px;
+      display: none;
     }
     .hero h1 {
       font-size: 2.5rem;
@@ -107,7 +104,6 @@
   </nav>
 
   <section id="home" class="hero">
-    <img src="xbtcr.png" alt="XBTCR Logo Large" class="hero-logo" onerror="this.style.display='none'" />
     <h1>Welcome to XBTCR</h1>
     <p>Decentralized. Transparent. Trusted.</p>
     <a href="Whitepaper.pdf" class="btn" target="_blank">Download Whitepaper</a>
