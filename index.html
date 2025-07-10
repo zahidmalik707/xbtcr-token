@@ -1,67 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XBTCR | Official Token Website</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XBTCR | Official Token Site</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
+    header, footer { background: #000; color: #fff; padding: 1rem; text-align: center; }
+    nav a { margin: 0 1rem; color: #fff; text-decoration: none; font-weight: bold; }
+    .container { padding: 2rem; text-align: center; }
+    .logo-main { max-width: 160px; margin: 1rem auto; border-radius: 50%; border: 4px solid gold; }
+    .desc { max-width: 800px; margin: 1rem auto; line-height: 1.7; font-size: 1.1rem; }
+    .pdf-link a { background: #007bff; color: #fff; padding: 0.7rem 1.5rem; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 1.5rem; font-weight: bold; }
+    .pdf-link a:hover { background: #0056b3; }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo-area">
-      <img src="logo.png" alt="XBTCR Logo" class="nav-logo" />
-      <span>XBTCR</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#tokenomics">Tokenomics</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#privacy">Privacy Policy</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="tokenomics.html">Tokenomics</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="Whitepaper.pdf" target="_blank">Whitepaper</a>
+    </nav>
+  </header>
 
-  <section id="home" class="hero">
+  <div class="container">
+    <img src="xbtcr.png" alt="XBTCR Logo" class="logo-main">
     <h1>Welcome to XBTCR</h1>
-    <p>Decentralized. Transparent. Trusted.</p>
-    <a href="whitepaper.pdf" class="btn">Download Whitepaper</a>
-  </section>
-
-  <section id="about" class="section">
-    <h2>About XBTCR</h2>
-    <p>XBTCR is a community-driven token built on the Binance Smart Chain with a burned supply of 99 trillion and a final circulating supply of just 1 trillion tokens. It offers 0% tax, 18 decimals, and 100% transparency — making it a perfect choice for decentralized trading and long-term growth.</p>
-  </section>
-
-  <section id="tokenomics" class="section">
-    <h2>Tokenomics</h2>
-    <ul>
-      <li><strong>Total Supply:</strong> 100 Trillion</li>
-      <li><strong>Burned:</strong> 99 Trillion</li>
-      <li><strong>Final Supply:</strong> 1 Trillion</li>
-      <li><strong>Decimals:</strong> 18</li>
-      <li><strong>Slippage:</strong> 2%</li>
-      <li><strong>Tax:</strong> 0%</li>
-    </ul>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>📧 Email: <a href="mailto:xbtcrtoken@gmail.com">xbtcrtoken@gmail.com</a></p>
-    <p>🌐 Website: <a href="https://xbtcr.github.io" target="_blank">https://xbtcr.github.io</a></p>
-    <p>🐦 Twitter: <a href="https://twitter.com/xbtcrtoken" target="_blank">@xbtcrtoken</a></p>
-    <p>📢 Telegram: <a href="https://t.me/xbtcr_bsc" target="_blank">Join XBTCR Official</a></p>
-    <p>📝 Whitepaper Link: Available on Website</p>
-  </section>
-
-  <section id="privacy" class="section">
-    <h2>Privacy & Policy</h2>
-    <p>We respect your privacy. All user data is protected and will never be shared without consent. No tracking scripts or cookies are used on this website. This site is purely informational for the XBTCR token community.</p>
-  </section>
+    <p class="desc">
+      XBTCR is a fully decentralized, community-powered token launched on the Binance Smart Chain. Designed with zero tax, no hidden fees, and zero whitelist restrictions, XBTCR is built for real transparency and borderless freedom in the crypto world. With a final supply of 1 Trillion and 99 Trillion tokens already burned, XBTCR empowers holders with true trust, liquidity, and long-term vision.
+    </p>
+    <div class="pdf-link">
+      <a href="Whitepaper.pdf" target="_blank">📄 Download XBTCR Whitepaper</a>
+    </div>
+  </div>
 
   <footer>
-    <p>Contract: 0x4274c09719F4eb538682F74DB27f7DB6DE330cd9</p>
-    <p>&copy; 2025 XBTCR Token. All Rights Reserved.</p>
-    <p><a href="https://twitter.com/xbtcrtoken" target="_blank">Follow us on Twitter</a></p>
+    &copy; 2025 XBTCR Token. All rights reserved.
   </footer>
 </body>
 </html>
