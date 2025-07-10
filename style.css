@@ -33,9 +33,10 @@
       width: 40px;
       margin-right: 10px;
       object-fit: cover;
-      border-radius: 50%; /* Make it circular */
-      background-color: transparent;
-      border: none;
+      border-radius: 10px;
+      background-color: #fff;
+      border: 2px solid gold; /* golden border */
+      box-shadow: 0 0 10px gold;
     }
     .nav-links {
       list-style: none;
