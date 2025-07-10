@@ -28,6 +28,8 @@ header {
   background-color: white;
   border-radius: 50%;
   padding: 5px;
+  box-shadow: none;
+  border: none;
 }
 
 /* Navigation */
@@ -53,10 +55,10 @@ header {
 
 /* Center Logo */
 .logo-main {
-  max-width: 180px;
+  max-width: 220px;
   margin: 2rem auto 1rem;
   display: block;
-  border-radius: 100%;
+  border-radius: 50%;
   border: none;
   box-shadow: none;
 }
