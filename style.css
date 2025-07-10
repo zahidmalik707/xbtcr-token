@@ -6,10 +6,12 @@
   <title>XBTCR | Official Token Site</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
-    header, footer { background: #000; color: #fff; padding: 1rem; text-align: center; }
-    nav a { margin: 0 1rem; color: #fff; text-decoration: none; font-weight: bold; }
+    header, footer { background: #000; color: #fff; padding: 1rem; display: flex; align-items: center; justify-content: space-between; }
+    nav a { margin: 0 0.6rem; color: #fff; text-decoration: none; font-weight: bold; }
+    .header-logo { height: 40px; border-radius: 50%; background: #fff; margin-left: 1rem; border: 2px solid gold; }
+    .nav-links { display: flex; align-items: center; }
     .container { padding: 2rem; text-align: center; }
-    .logo-main { max-width: 160px; margin: 1rem auto; border-radius: 50%; border: 4px solid gold; }
+    .logo-main { max-width: 160px; margin: 1rem auto; border-radius: 50%; border: 2px solid gold; box-shadow: none; }
     .desc { max-width: 800px; margin: 1rem auto; line-height: 1.7; font-size: 1.1rem; }
     .pdf-link a { background: #007bff; color: #fff; padding: 0.7rem 1.5rem; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 1.5rem; font-weight: bold; }
     .pdf-link a:hover { background: #0056b3; }
@@ -17,7 +19,8 @@
 </head>
 <body>
   <header>
-    <nav>
+    <img src="xbtcr.png" alt="XBTCR Logo" class="header-logo">
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="tokenomics.html">Tokenomics</a>
