@@ -65,15 +65,6 @@
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
     .section {
       padding: 3rem 2rem;
       background-color: #fff;
@@ -99,50 +90,18 @@
       <span>XBTCR</span>
     </div>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#tokenomics">Tokenomics</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#privacy">Privacy Policy</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="tokenomics.html">Tokenomics</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
     </ul>
   </nav>
 
   <section id="home" class="hero">
     <img src="xbtcr.png" alt="XBTCR Logo" class="hero-logo" onerror="this.style.display='none'" />
     <h1>Welcome to XBTCR</h1>
-    <p>Decentralized. Transparent. Trusted.</p>
-    <a href="Whitepaper.pdf" class="btn" target="_blank">Download Whitepaper</a>
-  </section>
-
-  <section id="about" class="section">
-    <h2>About XBTCR</h2>
-    <p>XBTCR is a community-driven token built on the Binance Smart Chain with a burned supply of 99 trillion and a final circulating supply of just 1 trillion tokens. It offers 0% tax, 18 decimals, and 100% transparency — making it a perfect choice for decentralized trading and long-term growth.</p>
-  </section>
-
-  <section id="tokenomics" class="section">
-    <h2>Tokenomics</h2>
-    <ul>
-      <li><strong>Total Supply:</strong> 100 Trillion</li>
-      <li><strong>Burned:</strong> 99 Trillion</li>
-      <li><strong>Final Supply:</strong> 1 Trillion</li>
-      <li><strong>Decimals:</strong> 18</li>
-      <li><strong>Slippage:</strong> 2%</li>
-      <li><strong>Tax:</strong> 0%</li>
-    </ul>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>📧 Email: <a href="mailto:xbtcrtoken@gmail.com">xbtcrtoken@gmail.com</a></p>
-    <p>🌐 Website: <a href="https://zahidmalik707.github.io/xbtcr-token" target="_blank">https://zahidmalik707.github.io/xbtcr-token</a></p>
-    <p>🐦 Twitter: <a href="https://twitter.com/xbtcrtoken" target="_blank">@xbtcrtoken</a></p>
-    <p>📢 Telegram: <a href="https://t.me/xbtcr_bsc" target="_blank">Join XBTCR Official</a></p>
-    <p>📝 Whitepaper: <a href="Whitepaper.pdf" target="_blank">View PDF</a></p>
-  </section>
-
-  <section id="privacy" class="section">
-    <h2>Privacy & Policy</h2>
-    <p>We respect your privacy. All user data is protected and will never be shared without consent. No tracking scripts or cookies are used on this website. This site is purely informational for the XBTCR token community.</p>
+    <p>XBTCR is a decentralized cryptocurrency project built on the Binance Smart Chain (BSC). With a final circulating supply of 1 trillion tokens after burning 99 trillion, XBTCR offers zero tax, zero fees, and complete transparency. Designed for long-term holders, early adopters, and real-world use, XBTCR is community-driven and built for global adoption. The project has no hidden mechanisms, no team tokens, and no fake promises. With utility, honesty, and fairness at its core, XBTCR stands out as a truly people-powered token in the crypto space.</p>
   </section>
 
   <footer>
