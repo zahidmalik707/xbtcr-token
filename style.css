@@ -28,6 +28,7 @@ nav a {
   background: #fff;
   margin-left: 1rem;
   border: 2px solid gold;
+  box-shadow: none; /* double ring off */
 }
 
 .nav-links {
@@ -45,7 +46,7 @@ nav a {
   margin: 1rem auto;
   border-radius: 50%;
   border: 2px solid gold;
-  box-shadow: none;
+  box-shadow: none; /* double ring off */
 }
 
 .desc {
