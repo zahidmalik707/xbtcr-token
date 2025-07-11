@@ -3,34 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>XBTCR | Contact</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Contact – XBTCR</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #101820;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #101820;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #101820;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: auto;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <img src="xbtcr.png" alt="XBTCR Logo" class="header-logo" />
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="tokenomics.html">Tokenomics</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="Whitepaper.html" target="_blank">Whitepaper</a>
-    </nav>
+    <h1>Contact Us</h1>
   </header>
 
-  <div class="container">
-    <h1>Contact Us</h1>
-    <p><strong>Email:</strong> xbtcrtoken@gmail.com</p>
-    <p><strong>Website:</strong> <a href="https://xbtcr.github.io" target="_blank">https://xbtcr.github.io</a></p>
-    <p><strong>Twitter:</strong> <a href="https://twitter.com/xbtcrtoken" target="_blank">@xbtcrtoken</a></p>
-    <p><strong>Telegram:</strong> <a href="https://t.me/xbtcr_bsc" target="_blank">t.me/xbtcr_bsc</a></p>
-    <p><strong>BSCScan:</strong> <a href="https://bscscan.com/token/0x4274c09719F4eb538682F74DB27f7DB6DE330cd9" target="_blank">View Token Contract</a></p>
-  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="tokenomics.html">Tokenomics</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="whitepaper.html">Whitepaper</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <form>
+      <h2>Get in Touch</h2>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </main>
 
   <footer>
-    &copy; 2025 XBTCR Token. All rights reserved.
+    &copy; 2025 XBTCR Token – All rights reserved.
   </footer>
+
 </body>
 </html>
