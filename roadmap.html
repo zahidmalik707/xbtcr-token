@@ -3,49 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>XBTCR | Roadmap</title>
+  <title>Roadmap | XBTCR</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .header-logo {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    .nav-links a {
+      color: #fff;
+      margin: 0 0.7rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .phase {
+      margin-bottom: 2rem;
+    }
+
+    .phase-title {
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+    }
+
+    .phase-text {
+      margin: 0.3rem 0;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <img src="xbtcr.png" alt="XBTCR Logo" class="header-logo" />
     <nav class="nav-links">
-      <a href="Whitepaper.html" target="_blank">Whitepaper</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
       <a href="tokenomics.html">Tokenomics</a>
       <a href="contact.html">Contact</a>
       <a href="privacy.html">Privacy</a>
       <a href="roadmap.html">Roadmap</a>
-      <a href="about.html">About</a>
+      <a href="Whitepaper.html" target="_blank">Whitepaper</a>
     </nav>
   </header>
 
-  <div class="container">
-    <h1>Roadmap</h1>
+  <main>
+    <h1>XBTCR Roadmap</h1>
 
-    <h2>Q3 2025</h2>
-    <p>✅ Token Launch on BSC (Binance Smart Chain)</p>
-    <p>✅ Website Launch & Whitepaper Published</p>
-    <p>✅ PancakeSwap Liquidity Added</p>
-    <p>✅ 99 Trillion Tokens Burned (Verified on BscScan)</p>
+    <div class="phase">
+      <div class="phase-title">Q3 2025 - Foundation</div>
+      <div class="phase-text">Contract deployed on BSC</div>
+      <div class="phase-text">Website & Whitepaper launched</div>
+      <div class="phase-text">Initial liquidity on PancakeSwap</div>
+    </div>
 
-    <h2>Q4 2025</h2>
-    <p>🔄 Token Info Update on BscScan</p>
-    <p>🔄 DEXTools Listing & Marketing Push</p>
-    <p>🔄 Influencer Promotions & Community Growth</p>
+    <div class="phase">
+      <div class="phase-title">Q4 2025 - Growth</div>
+      <div class="phase-text">Community building</div>
+      <div class="phase-text">CoinMarketCap & CoinGecko listing</div>
+      <div class="phase-text">Influencer marketing & AMA sessions</div>
+    </div>
 
-    <h2>Q1 2026</h2>
-    <p>🚀 CEX Listing Exploration</p>
-    <p>🚀 Development of XBTCR Utility Integration</p>
-    <p>🚀 Advanced Smart Contract Features</p>
+    <div class="phase">
+      <div class="phase-title">Q1 2026 - Expansion</div>
+      <div class="phase-text">Utility integration planning</div>
+      <div class="phase-text">Platform development begins</div>
+      <div class="phase-text">DAO governance concepts</div>
+    </div>
 
-    <h2>Q2 2026</h2>
-    <p>🌐 Strategic Partnerships</p>
-    <p>🌐 Ecosystem Expansion</p>
-    <p>🌐 Multi-chain Bridge Planning</p>
-  </div>
+    <div class="phase">
+      <div class="phase-title">Q2 2026 - Sustainability</div>
+      <div class="phase-text">Staking platform exploration</div>
+      <div class="phase-text">Launchpad consideration</div>
+      <div class="phase-text">Long-term marketing strategy</div>
+    </div>
+  </main>
 
   <footer>
     &copy; 2025 XBTCR Token. All rights reserved.
   </footer>
+
 </body>
 </html>
