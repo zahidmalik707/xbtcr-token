@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tokenomics | XBTCR</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XBTCR | Tokenomics</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #222;
       margin: 0;
+      padding: 0;
     }
-
-    main {
-      flex: 1;
+    header {
+      background: #000;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .header-logo {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
       padding: 2rem;
+      text-align: center;
     }
-
+    h1 {
+      color: #000;
+      margin-bottom: 2rem;
+    }
+    p {
+      line-height: 1.8;
+      font-size: 18px;
+      margin: 1.2rem 0;
+    }
     footer {
       background-color: #000;
-      color: #fff;
+      color: white;
       text-align: center;
-      padding: 1rem 0;
+      padding: 1rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="xbtcr.png" alt="XBTCR Logo" class="header-logo">
-    <nav class="nav-links">
+    <img src="xbtcr.png" alt="XBTCR Logo" class="header-logo" />
+    <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="tokenomics.html">Tokenomics</a>
       <a href="contact.html">Contact</a>
       <a href="privacy.html">Privacy</a>
       <a href="roadmap.html">Roadmap</a>
-      <a href="Whitepaper.html" target="_blank">Whitepaper</a>
     </nav>
   </header>
 
-  <main>
+  <div class="container">
     <h1>Tokenomics</h1>
-    <p><strong>Total Supply:</strong> 1 Trillion</p>
-    <p><strong>Burned:</strong> 99 Trillion</p>
-    <p><strong>Final Circulating Supply:</strong> 1 Trillion</p>
-    <p><strong>Slippage:</strong> 2%</p>
-    <p><strong>Tax:</strong> 3.5% (2% Marketing + 1.5% Auto-burn)</p>
+    <p><strong>Total Supply:</strong> 100,000,000,000,000 (100 Trillion)</p>
+    <p><strong>Burned Supply:</strong> 99,000,000,000,000 (99 Trillion) permanently removed from circulation.</p>
+    <p><strong>Final Circulating Supply:</strong> 1,000,000,000,000 (1 Trillion)</p>
+    <p><strong>Slippage:</strong> 2% (recommended for smooth trades on DEXs)</p>
+    <p><strong>Tax Structure:</strong> 3.5% Total<br />
+      - 2.0% for Marketing & Development<br />
+      - 1.5% Auto-Burned to reduce supply and create scarcity
+    </p>
     <p><strong>Liquidity:</strong> Added to PancakeSwap V2 (XBTCR/WBNB Pair)</p>
-    <p><strong>Restrictions:</strong> No blacklist / whitelist. Open trading.</p>
-  </main>
+    <p><strong>Restrictions:</strong> No blacklist, no whitelist, and no private sale barriers — open and fair trading for all.</p>
+    <p><strong>Transparency:</strong> Burn transactions and contract are fully verifiable on BscScan. Ownership is renounced and supply is locked.</p>
+  </div>
 
   <footer>
     &copy; 2025 XBTCR Token. All rights reserved.
