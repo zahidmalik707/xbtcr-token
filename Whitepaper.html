@@ -4,165 +4,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>XBTCR Whitepaper</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/png" href="xbtcr.png" />
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #fff;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f7f7f7;
       color: #222;
-      line-height: 1.7;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
     header {
       background-color: #101820;
-      color: #fff;
-      padding: 25px;
-      text-align: center;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    nav {
-      background-color: #333;
-      text-align: center;
-      padding: 12px;
+    header img {
+      height: 50px;
+      background-color: white;
+      padding: 3px;
     }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+    header h1 {
+      margin: 0;
+      font-size: 24px;
     }
 
-    main {
+    .container {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      flex: 1;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    h1, h2, h3 {
+    h2 {
       color: #101820;
-      margin-top: 40px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 30px;
     }
 
-    p {
-      margin-bottom: 20px;
-    }
-
-    ul {
-      padding-left: 20px;
+    a {
+      color: #007bff;
+      text-decoration: none;
     }
 
     footer {
-      background-color: #101820;
-      color: #fff;
       text-align: center;
-      padding: 25px 0 15px;
-      margin-top: auto;
-    }
-
-    .social-links a {
-      display: inline-block;
-      margin-right: 15px;
-      color: #fff;
-      font-size: 18px;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .social-links a:hover {
-      color: #ccc;
+      margin: 40px 0 20px;
+      font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>XBTCR Token – Whitepaper</h1>
+    <img src="xbtcr.png" alt="XBTCR Logo" />
+    <h1>XBTCR Whitepaper</h1>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="tokenomics.html">Tokenomics</a>
-    <a href="roadmap.html">Roadmap</a>
-    <a href="whitepaper.html">Whitepaper</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy.html">Privacy</a>
-  </nav>
-
-  <main>
+  <div class="container">
     <h2>1. Introduction</h2>
-    <p>XBTCR is a decentralized cryptocurrency token built on the Binance Smart Chain. Designed for secure, low-tax, transparent, and flexible community-driven utility, XBTCR aims to simplify participation in decentralized finance (DeFi) and offer long-term value to holders.</p>
+    <p>XBTCR is a decentralized cryptocurrency built on the Binance Smart Chain (BEP-20). It is designed with community-first principles – featuring zero manipulation, no team wallets, and a fair tokenomics model. XBTCR is engineered to be transparent, secure, and open to all.</p>
 
     <h2>2. Token Overview</h2>
-    <ul>
-      <li><strong>Token Name:</strong> XBTCR</li>
-      <li><strong>Symbol:</strong> XBTCR</li>
-      <li><strong>Network:</strong> Binance Smart Chain (BEP-20)</li>
-      <li><strong>Decimals:</strong> 18</li>
-      <li><strong>Contract Address:</strong> 0x4274c09719F4eb538682F74DB27f7DB6DE330cd9</li>
-    </ul>
+    <p>
+      <strong>Token Name:</strong> XBTCR<br/>
+      <strong>Symbol:</strong> XBTCR<br/>
+      <strong>Network:</strong> Binance Smart Chain (BEP-20)<br/>
+      <strong>Decimals:</strong> 18<br/>
+      <strong>Contract Address:</strong> 0x4274c09719F4eb538682F74DB27f7DB6DE330cd9
+    </p>
 
     <h2>3. Supply Details</h2>
-    <ul>
-      <li><strong>Total Supply:</strong> 100 Trillion</li>
-      <li><strong>Burned Tokens:</strong> 99 Trillion</li>
-      <li><strong>Final Circulating Supply:</strong> 1 Trillion</li>
-      <li><strong>Burn TX Hash:</strong> <a href="https://bscscan.com/tx/0x46c173b743001535960241d9563dfe37733d7955d1388771d5f00c02c3b3a9f3" target="_blank">View on BscScan</a></li>
-      <li><strong>Burn Address:</strong> 0x000000000000000000000000000000000000dEaD</li>
-    </ul>
+    <p>
+      <strong>Total Supply:</strong> 100 Trillion<br/>
+      <strong>Burned Tokens:</strong> 99 Trillion<br/>
+      <strong>Final Circulating Supply:</strong> 1 Trillion<br/>
+      <strong>Burn TX:</strong> <a href="https://bscscan.com/tx/0x46c173b743001535960241d9563dfe37733d7955d1388771d5f00c02c3b3a9f3" target="_blank">View on BscScan</a><br/>
+      <strong>Burn Address:</strong> 0x000000000000000000000000000000000000dEaD
+    </p>
 
     <h2>4. Tax Structure</h2>
+    <p>
+      <strong>Marketing:</strong> 2.00%<br/>
+      <strong>Auto-Burn:</strong> 1.50%<br/>
+      <strong>Total Tax:</strong> 3.50%<br/>
+      <strong>Slippage:</strong> 2%<br/>
+      <strong>Liquidity:</strong> PancakeSwap V2 (XBTCR/WBNB)<br/>
+      <strong>Restrictions:</strong> No whitelist/blacklist. Fully open trading.
+    </p>
+
+    <h2>5. Security & Trust</h2>
     <ul>
-      <li><strong>Marketing:</strong> 2.00%</li>
-      <li><strong>Auto-Burn:</strong> 1.50%</li>
-      <li><strong>Total Tax:</strong> 3.50%</li>
-      <li><strong>Slippage:</strong> 2%</li>
-      <li><strong>Liquidity:</strong> PancakeSwap V2 (XBTCR/WBNB)</li>
-      <li><strong>Restrictions:</strong> No whitelist or blacklist. Fully open trading.</li>
+      <li>Contract is verified and public on BscScan.</li>
+      <li>99% of total supply burned at launch.</li>
+      <li>No private wallets or presale allocations.</li>
+      <li>Community-driven with fully open-source code.</li>
     </ul>
 
-    <h2>5. Roadmap Summary</h2>
-    <ul>
-      <li>✅ Token Creation & Verification</li>
-      <li>✅ Whitepaper & Website Launch</li>
-      <li>✅ Liquidity on PancakeSwap</li>
-      <li>✅ DEXTools Listing</li>
-      <li>🔄 BscScan Token Info Update</li>
-      <li>🔜 CMC + CG Listing</li>
-      <li>🔜 Community Growth + Twitter Campaign</li>
-    </ul>
+    <h2>6. Roadmap</h2>
+    <p>
+      <strong>Phase 1:</strong> Token Creation, Website, Whitepaper, Burn<br/>
+      <strong>Phase 2:</strong> PancakeSwap Launch, DEXTools Setup, BscScan Info<br/>
+      <strong>Phase 3:</strong> CMC & CG Listings, Influencer Promotions, Community Growth<br/>
+      <strong>Phase 4:</strong> Utility Expansion, Staking, NFTs, DAO Governance
+    </p>
 
-    <h2>6. Security & Transparency</h2>
-    <p>We prioritize public trust by ensuring:</p>
-    <ul>
-      <li>Verified contract source code on BscScan</li>
-      <li>Proof of burn visible on-chain</li>
-      <li>No external ownership or risky permissions</li>
-      <li>All transactions publicly viewable via BscScan</li>
-    </ul>
-
-    <h2>7. Disclaimer</h2>
-    <p>This token is experimental and community-driven. Investing in cryptocurrencies carries risk. XBTCR does not guarantee returns and is not liable for any financial loss. Always do your own research (DYOR).</p>
-
-    <h2>8. Contact</h2>
-    <p>For more details, contact us at <a href="mailto:xbtcrtoken@gmail.com">xbtcrtoken@gmail.com</a> or visit our <a href="https://xbtcr.github.io/contact.html">contact page</a>.</p>
-  </main>
+    <h2>7. Conclusion</h2>
+    <p>XBTCR is designed to be a transparent, secure, and fair cryptocurrency that sets a new standard in trustless DeFi. With all decisions and token ownership in the hands of the community, XBTCR represents a revolution in fairness and decentralization.</p>
+  </div>
 
   <footer>
-    <div class="social-links">
-      <a href="https://twitter.com/xbtcrtoken" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://t.me/xbtcrtoken" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
-      <a href="mailto:xbtcrtoken@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://xbtcr.github.io" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
-    </div>
-    <p style="margin-top: 10px;">&copy; 2025 XBTCR Token – All rights reserved.</p>
+    &copy; 2025 XBTCR Token — All rights reserved.
   </footer>
 
 </body>
