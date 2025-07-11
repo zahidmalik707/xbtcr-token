@@ -3,95 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>XBTCR | Tokenomics</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>XBTCR Tokenomics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #fff;
-      color: #222;
       margin: 0;
       padding: 0;
-    }
-    header {
-      background: #000;
-      color: #fff;
-      padding: 1rem 2rem;
+      background-color: #fff;
+      color: #222;
+      line-height: 1.7;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      flex-direction: column;
+      min-height: 100vh;
     }
-    .header-logo {
-      height: 60px;
-      width: 60px;
-      border-radius: 50%;
-      object-fit: cover;
+
+    header {
+      background-color: #101820;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
     }
+
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 12px;
+    }
+
     nav a {
-      color: white;
-      margin-left: 15px;
+      color: #fff;
       text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
     }
-    .container {
+
+    main {
       max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      text-align: center;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex: 1;
     }
-    h1 {
-      color: #000;
-      margin-bottom: 2rem;
+
+    h1, h2 {
+      color: #101820;
     }
-    p {
-      line-height: 1.6;
-      font-size: 16px;
-      text-align: justify;
+
+    .section {
+      margin-bottom: 40px;
     }
+
+    ul {
+      padding-left: 20px;
+    }
+
     footer {
-      background-color: #000;
-      color: white;
+      background-color: #101820;
+      color: #fff;
       text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
+      padding: 25px 0 15px;
+      margin-top: auto;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ccc;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="xbtcr.png" alt="XBTCR Logo" class="header-logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="tokenomics.html">Tokenomics</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="roadmap.html">Roadmap</a>
-    </nav>
+    <h1>XBTCR Tokenomics</h1>
   </header>
 
-  <div class="container">
-    <h1>Tokenomics</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="tokenomics.html">Tokenomics</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="whitepaper.html">Whitepaper</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
 
-    <p>
-      XBTCR was launched with a total supply of 100 trillion tokens. Out of this, 99 trillion tokens were permanently burned and removed from circulation. This leaves a final circulating supply of just 1 trillion tokens, ensuring scarcity and fairness in distribution.
-    </p>
+  <main>
+    <section class="section">
+      <h2>Token Information</h2>
+      <ul>
+        <li><strong>Token Name:</strong> XBTCR</li>
+        <li><strong>Symbol:</strong> XBTCR</li>
+        <li><strong>Decimals:</strong> 18</li>
+        <li><strong>Network:</strong> Binance Smart Chain (BEP-20)</li>
+        <li><strong>Contract Address:</strong> 0x4274c09719F4eb538682F74DB27f7DB6DE330cd9</li>
+      </ul>
+    </section>
 
-    <p>
-      The trading slippage is recommended at 2%, which allows for smooth buying and selling on PancakeSwap without failed transactions. While the base token transfers are tax-free, a total transaction tax of 3.5% is applied on DEX trades — with 2% allocated towards marketing and development, and 1.5% automatically burned to reduce supply.
-    </p>
+    <section class="section">
+      <h2>Supply Overview</h2>
+      <ul>
+        <li><strong>Total Supply:</strong> 100 Trillion</li>
+        <li><strong>Burned Tokens:</strong> 99 Trillion</li>
+        <li><strong>Circulating Supply:</strong> 1 Trillion</li>
+        <li><strong>Burn Address:</strong> 0x000000000000000000000000000000000000dEaD</li>
+        <li><strong>Burn TX Hash:</strong> <a href="https://bscscan.com/tx/0x46c173b743001535960241d9563dfe37733d7955d1388771d5f00c02c3b3a9f3" target="_blank">View on BscScan</a></li>
+      </ul>
+    </section>
 
-    <p>
-      Liquidity has been added to PancakeSwap V2 through the XBTCR/WBNB pair, and the contract does not contain any blacklist or whitelist functions. All trading is open and permissionless — no privileged wallets, no traps, and no limits.
-    </p>
-
-    <p>
-      Every burn is verifiable on-chain and the smart contract is publicly available on BscScan. The ownership has been renounced, ensuring that no further changes can be made to core functions — making XBTCR a fully decentralized, trustless token.
-    </p>
-  </div>
+    <section class="section">
+      <h2>Tax Breakdown</h2>
+      <ul>
+        <li><strong>Marketing Tax:</strong> 2.00%</li>
+        <li><strong>Auto-Burn Tax:</strong> 1.50%</li>
+        <li><strong>Total Tax:</strong> 3.50%</li>
+        <li><strong>Recommended Slippage:</strong> 2%</li>
+        <li><strong>Liquidity:</strong> PancakeSwap V2 (XBTCR/WBNB)</li>
+        <li><strong>Restrictions:</strong> No whitelist or blacklist. Fully open trading.</li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 XBTCR Token. All rights reserved.
+    <div class="social-links">
+      <a href="https://twitter.com/xbtcrtoken" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://t.me/xbtcrtoken" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="mailto:xbtcrtoken@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://xbtcr.github.io" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+    </div>
+    <p style="margin-top: 10px;">&copy; 2025 XBTCR Token – All rights reserved.</p>
   </footer>
+
 </body>
 </html>
