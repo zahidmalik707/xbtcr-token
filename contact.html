@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact – XBTCR</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-wxV6cZVvXkk+7dYmVVTrkldYytlEsH5QqFjHZX46n10OWzHPDda5HEfTDfMPX6j5s9lV52LUs9DyVC4h8SL3xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * {
       margin: 0;
@@ -55,7 +56,7 @@
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     input, textarea {
@@ -82,26 +83,42 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      margin-top: 30px;
     }
 
     .contact-info h3 {
       margin-bottom: 10px;
     }
 
+    .social-links {
+      margin-top: 10px;
+    }
+
     .social-links a {
       display: inline-block;
       margin-right: 15px;
-      color: #101820;
+      color: #fff;
+      font-size: 18px;
       text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ccc;
+    }
+
+    #success-message {
+      display: none;
+      margin-top: 20px;
+      color: green;
       font-weight: bold;
+      text-align: center;
     }
 
     footer {
       background-color: #101820;
       color: #fff;
       text-align: center;
-      padding: 15px 0;
+      padding: 25px 0 15px;
       margin-top: auto;
     }
   </style>
@@ -123,6 +140,9 @@
 
   <main>
     <form action="https://formspree.io/f/xyzjrolp" method="POST">
+      <!-- Hidden redirect to stay on same page -->
+      <input type="hidden" name="_redirect" value="https://xbtcr.github.io/contact.html?success=true">
+      
       <h2>Get in Touch</h2>
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
@@ -130,25 +150,42 @@
       <button type="submit">Send Message</button>
     </form>
 
+    <div id="success-message">
+      ✅ Thank you! Your message has been sent successfully.
+    </div>
+
     <div class="contact-info">
       <h3>Contact Details</h3>
       <p><strong>Email:</strong> xbtcrtoken@gmail.com</p>
-      <p><strong>Official Hours:</strong> Monday to Saturday – 10:00 AM to 6:00 PM (PKT)</p>
+      <p><strong>Support Hours:</strong> Monday to Saturday — 10:00 AM to 6:00 PM (PKT)</p>
       <p><strong>Response Time:</strong> Usually within 24 hours</p>
-
-      <h3>Follow Us</h3>
-      <div class="social-links">
-        <a href="https://twitter.com/xbtcrtoken" target="_blank">Twitter</a>
-        <a href="https://t.me/xbtcrtoken" target="_blank">Telegram</a>
-        <a href="mailto:xbtcrtoken@gmail.com">Gmail</a>
-        <a href="https://xbtcr.github.io" target="_blank">Website</a>
-      </div>
     </div>
   </main>
 
   <footer>
-    &copy; 2025 XBTCR Token – All rights reserved.
+    <div class="social-links">
+      <a href="https://twitter.com/xbtcrtoken" target="_blank" title="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://t.me/xbtcrtoken" target="_blank" title="Telegram">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="mailto:xbtcrtoken@gmail.com" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://xbtcr.github.io" target="_blank" title="Website">
+        <i class="fas fa-globe"></i>
+      </a>
+    </div>
+    <p style="margin-top: 10px;">&copy; 2025 XBTCR Token – All rights reserved.</p>
   </footer>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+      document.getElementById('success-message').style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>
