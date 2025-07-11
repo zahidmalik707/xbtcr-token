@@ -2,122 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XBTCR - Community-Powered BSC Token</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XBTCR Token</title>
   <link rel="icon" type="image/png" href="xbtcr.png" />
-
-  <!-- ✅ SEO Meta Tags -->
-  <meta name="description" content="XBTCR is a 100% community-powered token on Binance Smart Chain. 99% supply burned, fair trading, and zero manipulation.">
-  <meta name="keywords" content="XBTCR, crypto, BSC, burn token, decentralized, tokenomics">
-  <meta name="author" content="XBTCR Team">
-
-  <!-- ✅ Open Graph / Facebook -->
-  <meta property="og:title" content="XBTCR - Fair Crypto on BSC">
-  <meta property="og:description" content="Built for the people. 99T supply burned. 1T circulating. Trade XBTCR on PancakeSwap.">
-  <meta property="og:image" content="xbtcr.png">
-  <meta property="og:url" content="https://zahidmalik707.github.io/xbtcr-token/index.html">
-  <meta property="og:type" content="website">
-
-  <!-- ✅ Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #fff;
       color: #222;
     }
 
     header {
       background-color: #101820;
+      color: #fff;
+      padding: 15px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 10px 20px;
+      align-items: center;
     }
 
-    header img.left-logo {
-      height: 50px;
-      background-color: white;
-      padding: 4px;
-      border-radius: 5px;
-    }
-
-    header img.center-logo {
+    .logo-left {
       height: 60px;
-      margin: auto;
-      display: block;
-      margin-top: 20px;
+      background-color: #fff;
+      padding: 2px;
+      display: inline-block;
     }
 
     nav {
-      background: #fff;
-      padding: 10px 20px;
+      background-color: #333;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      padding: 12px;
     }
 
     nav a {
-      margin: 0 15px;
+      color: #fff;
       text-decoration: none;
-      color: #101820;
+      margin: 0 15px;
       font-weight: bold;
     }
 
-    .hero {
+    .center-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0 20px;
+    }
+
+    .center-logo img {
+      width: 200px;
+      height: auto;
+    }
+
+    .main-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
       text-align: center;
-      padding: 60px 20px;
     }
 
-    .hero h1 {
-      font-size: 40px;
-      margin-bottom: 20px;
+    .main-content h1 {
+      color: #101820;
+      font-size: 36px;
     }
 
-    .hero p {
+    .main-content p {
       font-size: 18px;
-      color: #444;
+      line-height: 1.6;
+    }
+
+    .view-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #101820;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
       background-color: #101820;
-      color: white;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0 15px;
       margin-top: 40px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #fff;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      .main-content h1 {
+        font-size: 28px;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with Left Logo -->
   <header>
-    <img src="xbtcr.png" alt="XBTCR Logo" class="left-logo" />
+    <img src="xbtcr.png" alt="XBTCR Logo Left" class="logo-left" />
+    <span style="font-size: 24px; font-weight: bold;">XBTCR Token</span>
   </header>
 
-  <!-- Center Logo -->
-  <img src="xbtcr.png" alt="XBTCR Center Logo" class="center-logo" />
-
-  <!-- Navigation Bar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="tokenomics.html">Tokenomics</a>
     <a href="roadmap.html">Roadmap</a>
     <a href="whitepaper.html">Whitepaper</a>
-    <a href="privacy.html">Privacy</a>
     <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
   </nav>
 
-  <!-- Hero Section -->
-  <div class="hero">
+  <div class="center-logo">
+    <img src="xbtcr.png" alt="XBTCR Logo Center" />
+  </div>
+
+  <div class="main-content">
     <h1>Welcome to XBTCR</h1>
-    <p>The future of community-driven crypto. 99T tokens burned. 1T in circulation. Trade freely on PancakeSwap.</p>
+    <p>XBTCR is a decentralized cryptocurrency on Binance Smart Chain with 99% of its supply burned and 100% of its power in the hands of the community. No team wallet, no manipulation — only transparent, public trading and utility.</p>
+
+    <a href="whitepaper.html" class="view-btn">
+      📄 View Whitepaper
+    </a>
   </div>
 
   <footer>
-    &copy; 2025 XBTCR Token — All rights reserved.
+    <div class="social-links">
+      <a href="https://twitter.com/xbtcrtoken" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://t.me/xbtcrtoken" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="mailto:xbtcrtoken@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://xbtcr.github.io" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+    </div>
+    <p style="margin-top: 10px;">&copy; 2025 XBTCR Token – All rights reserved.</p>
   </footer>
 
 </body>
