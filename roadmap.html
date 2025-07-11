@@ -3,132 +3,163 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Roadmap | XBTCR</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>XBTCR Roadmap</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      min-height: 100vh;
+      background-color: #fff;
+      color: #222;
+      line-height: 1.7;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      background-color: #000;
+      background-color: #101820;
       color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      padding: 25px;
+      text-align: center;
     }
 
-    .header-logo {
-      height: 60px;
-      width: 60px;
-      object-fit: contain;
-      background-color: white;
-      border-radius: 50%;
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 12px;
     }
 
-    .nav-links a {
+    nav a {
       color: #fff;
-      margin: 0 0.7rem;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
     }
 
     main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
       flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 2rem;
     }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
+    h1, h2 {
+      color: #101820;
+      margin-top: 30px;
     }
 
-    .phase {
-      margin-bottom: 2rem;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
     }
 
-    .phase-title {
-      font-weight: bold;
-      margin-bottom: 0.8rem;
+    ul li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 30px;
     }
 
-    .phase-text {
-      margin: 0.3rem 0;
+    ul li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+      color: green;
+    }
+
+    .in-progress::before {
+      content: "🔄";
+      color: orange;
+    }
+
+    .upcoming::before {
+      content: "🔜";
+      color: gray;
     }
 
     footer {
-      background-color: #000;
+      background-color: #101820;
       color: #fff;
       text-align: center;
-      padding: 1rem 0;
+      padding: 25px 0 15px;
+      margin-top: auto;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ccc;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="xbtcr.png" alt="XBTCR Logo" class="header-logo" />
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="tokenomics.html">Tokenomics</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="Whitepaper.html" target="_blank">Whitepaper</a>
-    </nav>
+    <h1>XBTCR Roadmap</h1>
   </header>
 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="tokenomics.html">Tokenomics</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="whitepaper.html">Whitepaper</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+
   <main>
-    <h1>XBTCR Roadmap</h1>
+    <h2>Phase 1: Foundation ✅</h2>
+    <ul>
+      <li>Token Creation & Verification</li>
+      <li>100 Trillion Supply Minted</li>
+      <li>99 Trillion Burned to Dead Wallet</li>
+      <li>Contract Verified on BscScan</li>
+      <li>Website & Whitepaper Live</li>
+    </ul>
 
-    <div class="phase">
-      <div class="phase-title">Q3 2025 - Foundation</div>
-      <div class="phase-text">Contract deployed on BSC</div>
-      <div class="phase-text">Website & Whitepaper launched</div>
-      <div class="phase-text">Initial liquidity on PancakeSwap</div>
-    </div>
+    <h2>Phase 2: Launch 🔄</h2>
+    <ul>
+      <li class="in-progress">Liquidity Added to PancakeSwap (XBTCR/WBNB)</li>
+      <li class="in-progress">DEXTools Listing Setup</li>
+      <li class="in-progress">BscScan Token Info Submission</li>
+      <li class="in-progress">GitHub Pages Website Published</li>
+    </ul>
 
-    <div class="phase">
-      <div class="phase-title">Q4 2025 - Growth</div>
-      <div class="phase-text">Community building</div>
-      <div class="phase-text">CoinMarketCap & CoinGecko listing</div>
-      <div class="phase-text">Influencer marketing & AMA sessions</div>
-    </div>
+    <h2>Phase 3: Expansion 🔜</h2>
+    <ul>
+      <li class="upcoming">CoinMarketCap (CMC) Listing</li>
+      <li class="upcoming">CoinGecko (CG) Listing</li>
+      <li class="upcoming">Initial Influencer Promotions</li>
+      <li class="upcoming">Community Engagement Events</li>
+      <li class="upcoming">Partnership Exploration</li>
+    </ul>
 
-    <div class="phase">
-      <div class="phase-title">Q1 2026 - Expansion</div>
-      <div class="phase-text">Utility integration planning</div>
-      <div class="phase-text">Platform development begins</div>
-      <div class="phase-text">DAO governance concepts</div>
-    </div>
-
-    <div class="phase">
-      <div class="phase-title">Q2 2026 - Sustainability</div>
-      <div class="phase-text">Staking platform exploration</div>
-      <div class="phase-text">Launchpad consideration</div>
-      <div class="phase-text">Long-term marketing strategy</div>
-    </div>
+    <h2>Phase 4: Long-Term 🔜</h2>
+    <ul>
+      <li class="upcoming">Utility Expansion (Voting, DAO Proposals)</li>
+      <li class="upcoming">Multi-Chain Bridge Options</li>
+      <li class="upcoming">Staking & Farming Integrations</li>
+      <li class="upcoming">Merchandise + NFT Ecosystem</li>
+    </ul>
   </main>
 
   <footer>
-    &copy; 2025 XBTCR Token. All rights reserved.
+    <div class="social-links">
+      <a href="https://twitter.com/xbtcrtoken" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://t.me/xbtcrtoken" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="mailto:xbtcrtoken@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://xbtcr.github.io" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+    </div>
+    <p style="margin-top: 10px;">&copy; 2025 XBTCR Token – All rights reserved.</p>
   </footer>
 
 </body>
