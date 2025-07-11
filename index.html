@@ -3,40 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>XBTCR | Official Token Site</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>XBTCR Token</title>
+  <link rel="icon" type="image/png" href="xbtcr.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #222;
+    }
+
+    header {
+      background-color: #101820;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img.logo-left {
+      height: 60px;
+    }
+
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 12px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .center-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0 20px;
+    }
+
+    .center-logo img {
+      width: 200px;
+      height: auto;
+    }
+
+    .main-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .main-content h1 {
+      color: #101820;
+      font-size: 36px;
+    }
+
+    .main-content p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #101820;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0 15px;
+      margin-top: 40px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #fff;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      .main-content h1 {
+        font-size: 28px;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <img src="xbtcr.png" alt="XBTCR Logo" class="header-logo">
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="Whitepaper.html" target="_blank">Whitepaper</a>
-      <a href="tokenomics.html">Tokenomics</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="about.html">About</a>
-    </nav>
+    <img src="xbtcr.png" alt="XBTCR Logo" class="logo-left" />
+    <span style="font-size: 24px; font-weight: bold;">XBTCR Token</span>
   </header>
 
-  <div class="container">
-    <img src="xbtcr.png" alt="XBTCR Logo" class="logo-main" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="tokenomics.html">Tokenomics</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="whitepaper.html">Whitepaper</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+
+  <div class="center-logo">
+    <img src="xbtcr.png" alt="XBTCR Logo Center" />
+  </div>
+
+  <div class="main-content">
     <h1>Welcome to XBTCR</h1>
-    <p class="desc">
-      XBTCR is a fully decentralized, community-powered token launched on the Binance Smart Chain. Designed with simplicity, fairness, and long-term sustainability in mind, XBTCR operates with no complex barriers, ensuring ease of trading and trust.
-      <br /><br />
-      The token has a final supply of 1 Trillion, after burning 99 Trillion from the initial total. A small 3.5% tax is applied on each transaction (2% allocated to marketing and 1.5% to burning), supporting both long-term growth and deflation.
-      <br /><br />
-      With liquidity on PancakeSwap V2 and no hidden restrictions, XBTCR represents a transparent and community-first initiative — empowering users with complete control and confidence.
-    </p>
-    <div class="pdf-link">
-      <a href="Whitepaper.html" target="_blank">📄 View XBTCR Whitepaper</a>
-    </div>
+    <p>XBTCR is a decentralized cryptocurrency on Binance Smart Chain with 99% of its supply burned and 100% of its power in the hands of the community. No team wallet, no manipulation — only transparent, public trading and utility.</p>
   </div>
 
   <footer>
-    &copy; 2025 XBTCR Token. All rights reserved.
+    <div class="social-links">
+      <a href="https://twitter.com/xbtcrtoken" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://t.me/xbtcrtoken" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="mailto:xbtcrtoken@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://xbtcr.github.io" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+    </div>
+    <p style="margin-top: 10px;">&copy; 2025 XBTCR Token – All rights reserved.</p>
   </footer>
+
 </body>
 </html>
