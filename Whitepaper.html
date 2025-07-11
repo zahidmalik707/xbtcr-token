@@ -35,30 +35,27 @@
     }
     .container {
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
     }
-    h1 {
-      text-align: center;
+    h1, h2 {
       color: #000;
-      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+    p {
+      line-height: 1.6;
+      margin: 1rem 0;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
     th, td {
-      padding: 1rem;
+      padding: 10px;
       border: 1px solid #ccc;
       text-align: left;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
     }
     footer {
       background: #000;
@@ -66,6 +63,11 @@
       text-align: center;
       padding: 1rem;
       margin-top: 3rem;
+    }
+    .social-links a {
+      color: #000;
+      text-decoration: none;
+      margin-right: 15px;
     }
   </style>
 </head>
@@ -83,33 +85,58 @@
   </header>
 
   <div class="container">
-    <h1>XBTCR Token – Whitepaper</h1>
+    <h1>XBTCR Whitepaper</h1>
+
+    <h2>1. Introduction</h2>
+    <p>XBTCR is a decentralized, community-driven token on Binance Smart Chain (BEP-20). It focuses on transparency, fairness, and complete decentralization. With zero tax on basic transfers and renounced ownership, it empowers the community to control and evolve the token ecosystem.</p>
+
+    <h2>2. Token Overview</h2>
     <table>
-      <tr><th>Section</th><th>Details</th></tr>
-      <tr><td>Token Name</td><td>XBTCR</td></tr>
-      <tr><td>Symbol</td><td>XBTCR</td></tr>
-      <tr><td>Network</td><td>Binance Smart Chain (BEP-20)</td></tr>
-      <tr><td>Standard</td><td>BEP-20</td></tr>
-      <tr><td>Decimals</td><td>18</td></tr>
-      <tr><td>Tax</td><td>3.5% (2% Marketing + 1.5% Auto-Burn)</td></tr>
-      <tr><td>Slippage</td><td>2% (Recommended for trading)</td></tr>
-      <tr><td>Contract Address</td><td>0x4274c09719F4eb538682F74DB27f7DB6DE330cd9</td></tr>
-      <tr><td>Total Supply</td><td>100 Trillion</td></tr>
-      <tr><td>Burned Supply</td><td>99 Trillion</td></tr>
-      <tr><td>Final Circulating Supply</td><td>1 Trillion</td></tr>
-      <tr><td>Burn TX Hash</td><td>0x46c173b743001535960241d9563dfe37733d7955d1388771d5f00c02c3b3a9f3</td></tr>
-      <tr><td>Burn Address</td><td>0x000000000000000000000000000000000000dEaD</td></tr>
-      <tr><td>Utility</td><td>DEX Trading, Governance Voting, Rewards, Web3 Future</td></tr>
-      <tr><td>Security</td><td>Verified Contract, No Team Tokens, No Hidden Fees</td></tr>
-      <tr><td>Ownership</td><td>Fully Renounced</td></tr>
-      <tr><td>Liquidity</td><td>Added to PancakeSwap V2 (XBTCR/WBNB)</td></tr>
-      <tr><td>Restrictions</td><td>No Whitelist / Blacklist — Open Trading</td></tr>
-      <tr><td>Roadmap</td><td>Q3 2025 to Q2 2026 (Launch, Listings, DEX/CEX, Utilities)</td></tr>
-      <tr><td>Email</td><td><a href="mailto:xbtcrtoken@gmail.com">xbtcrtoken@gmail.com</a></td></tr>
-      <tr><td>Website</td><td><a href="https://xbtcr.github.io">https://xbtcr.github.io</a></td></tr>
-      <tr><td>Twitter</td><td><a href="https://twitter.com/xbtcrtoken">@xbtcrtoken</a></td></tr>
-      <tr><td>Telegram</td><td><a href="https://t.me/xbtcr_bsc">@xbtcr_bsc</a></td></tr>
+      <tr><th>Token Name</th><td>XBTCR</td></tr>
+      <tr><th>Symbol</th><td>XBTCR</td></tr>
+      <tr><th>Network</th><td>Binance Smart Chain (BEP-20)</td></tr>
+      <tr><th>Decimals</th><td>18</td></tr>
+      <tr><th>Contract Address</th><td>0x4274c09719F4eb538682F74DB27f7DB6DE330cd9</td></tr>
     </table>
+
+    <h2>3. Supply Details</h2>
+    <table>
+      <tr><th>Total Supply</th><td>100 Trillion</td></tr>
+      <tr><th>Burned Tokens</th><td>99 Trillion</td></tr>
+      <tr><th>Final Circulating Supply</th><td>1 Trillion</td></tr>
+      <tr><th>Burn TX Hash</th><td><a href="https://bscscan.com/tx/0x46c173b743001535960241d9563dfe37733d7955d1388771d5f00c02c3b3a9f3" target="_blank">View on BscScan</a></td></tr>
+      <tr><th>Burn Address</th><td>0x000000000000000000000000000000000000dEaD</td></tr>
+    </table>
+
+    <h2>4. Tax Structure</h2>
+    <table>
+      <tr><th>Marketing</th><td>2.00%</td></tr>
+      <tr><th>Auto-Burn</th><td>1.50%</td></tr>
+      <tr><th>Total Tax</th><td>3.50%</td></tr>
+      <tr><th>Slippage</th><td>2%</td></tr>
+      <tr><th>Liquidity</th><td>PancakeSwap V2 (XBTCR/WBNB)</td></tr>
+      <tr><th>Restrictions</th><td>No whitelist/blacklist. Fully open trading.</td></tr>
+    </table>
+
+    <h2>5. Utility & Use Cases</h2>
+    <p>XBTCR can be used for trading, community staking (in future), DAO governance, and integration in Web3 platforms.</p>
+
+    <h2>6. Roadmap Summary</h2>
+    <p><strong>Q3 2025</strong>: Token launch, website, whitepaper, PancakeSwap liquidity.<br>
+    <strong>Q4 2025</strong>: Token info update, CoinGecko/CMC applications, community building.<br>
+    <strong>2026</strong>: Governance, staking, Web3 utility, CEX exploration.</p>
+
+    <h2>7. Trust & Transparency</h2>
+    <p>Verified contract, renounced ownership, 99T tokens burned, and no hidden tax/whitelist/blacklist functions.</p>
+
+    <h2>8. Contact & Socials</h2>
+    <p class="social-links">
+      <a href="mailto:xbtcrtoken@gmail.com">📧 Email</a><br>
+      <a href="https://xbtcr.github.io" target="_blank">🌐 Website</a><br>
+      <a href="https://twitter.com/xbtcrtoken" target="_blank">🐦 Twitter</a><br>
+      <a href="https://t.me/xbtcr_bsc" target="_blank">📢 Telegram</a><br>
+      <a href="whitepaper.html" target="_blank">📄 Whitepaper</a>
+    </p>
   </div>
 
   <footer>
