@@ -1,42 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | XBTCR</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About XBTCR</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #222;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #101820;
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      text-align: center;
+      padding: 12px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    h1, h2 {
+      color: #101820;
+    }
+
+    footer {
+      background-color: #101820;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0 15px;
+      margin-top: auto;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ccc;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <img src="xbtcr.png" alt="XBTCR Logo" class="header-logo">
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="Whitepaper.html" target="_blank">Whitepaper</a>
-      <a href="tokenomics.html">Tokenomics</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="about.html">About</a>
-      
-    </nav>
+    <h1>About XBTCR</h1>
   </header>
 
-  <div class="container">
-    <img src="xbtcr.png" alt="XBTCR Center Logo" class="logo-main">
-    <h1>About XBTCR</h1>
-    <p class="desc">
-      XBTCR is a next-generation cryptocurrency built on the Binance Smart Chain (BSC), designed to empower the community with true decentralization, fairness, and financial opportunity. Unlike traditional tokens, XBTCR enforces zero tax, no developer wallet allocations, and no pre-sale traps. The project started as a vision to provide an accessible and borderless asset that anyone can trust and verify transparently on-chain.
-    </p>
-    <p class="desc">
-      With an original supply of 100 trillion tokens, 99 trillion were sent to the burn address in a public transaction, ensuring a reduced, fixed, and verifiable circulating supply of only 1 trillion tokens. The goal is to create a long-lasting, community-owned token where users are truly in control.
-    </p>
-    <p class="desc">
-      The XBTCR ecosystem prioritizes community input, real use cases, fair trading, and growth through transparency and engagement. It is open for everyone — from new investors to experienced crypto holders — offering a safe space in the decentralized financial world.
-    </p>
-  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="tokenomics.html">Tokenomics</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="whitepaper.html">Whitepaper</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+
+  <main>
+    <h2>What is XBTCR?</h2>
+    <p>XBTCR is a decentralized, community-driven cryptocurrency on Binance Smart Chain, designed to offer freedom, fairness, and full transparency. With zero manipulation, no private wallets, and no pre-sale advantage, XBTCR gives power back to the people.</p>
+
+    <h2>Our Mission</h2>
+    <p>To create a clean and fair token ecosystem with zero restrictions, open liquidity, and community-focused decision making. We aim to lead by example with visible burns, public records, and secure contract structure.</p>
+
+    <h2>Our Vision</h2>
+    <p>We envision a world where crypto projects are no longer feared for rugs and scams. XBTCR aims to be the standard of trust — a token with no hidden code, no special permissions, and everything verifiable on-chain.</p>
+
+    <h2>Why XBTCR is Different</h2>
+    <ul>
+      <li>✅ 99% supply burned at launch</li>
+      <li>✅ No team wallet, no private sale</li>
+      <li>✅ Verified contract & source code</li>
+      <li>✅ Liquidity added publicly</li>
+      <li>✅ Public token ownership (no central control)</li>
+    </ul>
+
+    <h2>Who Controls XBTCR?</h2>
+    <p>No one. XBTCR is owned by its holders. There are no developers holding a special key. Everything is on-chain, public, and community-governed.</p>
+  </main>
 
   <footer>
-    &copy; 2025 XBTCR Token. All rights reserved.
+    <div class="social-links">
+      <a href="https://twitter.com/xbtcrtoken" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://t.me/xbtcrtoken" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+      <a href="mailto:xbtcrtoken@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://xbtcr.github.io" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+    </div>
+    <p style="margin-top: 10px;">&copy; 2025 XBTCR Token – All rights reserved.</p>
   </footer>
+
 </body>
 </html>
