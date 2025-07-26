@@ -1,159 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>XBTCR Token</title>
-  <link rel="icon" type="image/png" href="xbtcr.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      color: #222;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XBTCR - Advanced Cryptocurrency Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0a1a;
+            color: white;
+            overflow-x: hidden;
+        }
 
-    header {
-      background-color: #101820;
-      color: #fff;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        /* Flash Header Styles */
+        .flash-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(10, 10, 26, 0.8);
+            position: fixed;
+            width: 90%;
+            z-index: 100;
+        }
 
-    .logo-left {
-      height: 60px;
-      background-color: #fff;
-      padding: 2px;
-      display: inline-block;
-    }
+        /* Logo Container - Now supports both image and text */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-    nav {
-      background-color: #333;
-      text-align: center;
-      padding: 12px;
-    }
+        .logo-img {
+            height: 50px;
+            animation: logoPulse 2s infinite alternate;
+        }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+        @keyframes logoPulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 10px gold); }
+        }
 
-    .center-logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 40px 0 20px;
-    }
+        /* Golden XBTCR Text Logo */
+        .xbtcr-logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #D4AF37, #F9D423);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            animation: goldGlow 2s infinite alternate;
+        }
 
-    .center-logo img {
-      width: 200px;
-      height: auto;
-    }
+        @keyframes goldGlow {
+            0% { text-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
+            100% { text-shadow: 0 0 20px rgba(249, 212, 35, 0.8), 
+                          0 0 30px rgba(212, 175, 55, 0.6); }
+        }
 
-    .main-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
+        /* Navigation Buttons */
+        .flash-nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
 
-    .main-content h1 {
-      color: #101820;
-      font-size: 36px;
-    }
+        .nav-btn {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
 
-    .main-content p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+        .nav-btn:hover {
+            background: rgba(79, 172, 254, 0.2);
+            animation: navFlash 0.5s;
+        }
 
-    .view-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background-color: #101820;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+        @keyframes navFlash {
+            0%, 100% { box-shadow: 0 0 5px rgba(79, 172, 254, 0); }
+            50% { box-shadow: 0 0 15px rgba(79, 172, 254, 0.7); }
+        }
 
-    footer {
-      background-color: #101820;
-      color: #fff;
-      text-align: center;
-      padding: 25px 0 15px;
-      margin-top: 40px;
-    }
+        .next-page-btn {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
 
-    .social-links a {
-      display: inline-block;
-      margin: 0 10px;
-      color: #fff;
-      font-size: 20px;
-      transition: color 0.3s ease;
-    }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
 
-    .social-links a:hover {
-      color: #ccc;
-    }
+        /* Main Content Styles - White Center */
+        .flash-main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: white;
+            color: #0a0a1a;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    @media (max-width: 600px) {
-      .main-content h1 {
-        font-size: 28px;
-      }
+        .particle-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.3;
+        }
 
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
-    }
-  </style>
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .coin-animation {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 40px;
+            background: radial-gradient(circle, #f5d742, #e6b422);
+            border-radius: 50%;
+            box-shadow: 0 0 30px #f5d742;
+            animation: coinRotate 5s infinite linear, coinGlow 2s infinite alternate;
+        }
+
+        @keyframes coinRotate {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        @keyframes coinGlow {
+            0% { box-shadow: 0 0 20px #f5d742; }
+            100% { box-shadow: 0 0 50px #f5d742; }
+        }
+
+        /* Orange CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .flash-button {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+        }
+
+        .buy-now-btn {
+            background: linear-gradient(45deg, #FF8C00, #FFA500);
+            color: white;
+            animation: orangeFlash 1.5s infinite;
+        }
+
+        @keyframes orangeFlash {
+            0%, 100% { box-shadow: 0 0 10px rgba(255, 140, 0, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(255, 165, 0, 0.8); }
+        }
+
+        .whitepaper-btn {
+            background: transparent;
+            color: #FF8C00;
+            border: 2px solid #FF8C00;
+            animation: orangeBorderFlash 3s infinite;
+        }
+
+        @keyframes orangeBorderFlash {
+            0%, 70%, 100% { border-color: #FF8C00; box-shadow: 0 0 0 rgba(255, 140, 0, 0); }
+            20%, 50% { border-color: #FFA500; box-shadow: 0 0 15px rgba(255, 165, 0, 0.6); }
+        }
+
+        /* Flash Footer Styles */
+        .flash-footer {
+            padding: 30px 5%;
+            text-align: center;
+            background: rgba(10, 10, 26, 0.8);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        .twitter { background: #1DA1F2; }
+        .telegram { background: #0088cc; }
+        .discord { background: #5865F2; }
+        .medium { background: #00ab6c; }
+        .github { background: #333; }
+        .linkedin { background: #0077b5; }
+
+        .social-icon:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: socialFlash 0.5s;
+        }
+
+        @keyframes socialFlash {
+            0% { box-shadow: 0 0 0 rgba(255, 255, 255, 0.8); }
+            100% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+        }
+    </style>
 </head>
 <body>
+    <!-- Flash Header with Logo Image and Golden Text -->
+    <header class="flash-header">
+        <div class="logo-container">
+            <!-- Replace 'xbtcr-logo.png' with your actual logo image file -->
+            <img src="xbtcr-logo.png" alt="XBTCR Logo" class="logo-img">
+            <div class="xbtcr-logo" id="animated-logo">XBTCR</div>
+        </div>
+        <nav class="flash-nav">
+            <a href="https://example.com/home" class="nav-btn" target="_blank">Home</a>
+            <a href="https://example.com/about" class="nav-btn" target="_blank">About</a>
+            <a href="https://example.com/features" class="nav-btn" target="_blank">Features</a>
+            <a href="https://example.com/roadmap" class="nav-btn" target="_blank">Roadmap</a>
+            <a href="https://example.com/team" class="nav-btn" target="_blank">Team</a>
+            <a href="https://example.com/contact" class="nav-btn" target="_blank">Contact</a>
+            <a href="https://example.com/next" class="next-page-btn" target="_blank">Next Page <i class="fas fa-arrow-right"></i></a>
+        </nav>
+    </header>
 
-  <header>
-    <img src="xbtcr.png" alt="XBTCR Logo Left" class="logo-left" />
-    <span style="font-size: 24px; font-weight: bold;">XBTCR Token</span>
-  </header>
+    <!-- Main Flash Content -->
+    <main class="flash-main">
+        <div class="particle-background" id="particles-js"></div>
+        <div class="hero-content">
+            <div class="coin-animation" id="3d-coin"></div>
+            <h1>Welcome to XBTCR</h1>
+            <p>The premium cryptocurrency platform with golden standards and flash transactions.</p>
+            <div class="cta-buttons">
+                <button class="buy-now-btn flash-button">Buy Now</button>
+                <button class="whitepaper-btn flash-button">Whitepaper</button>
+            </div>
+        </div>
+    </main>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="tokenomics.html">Tokenomics</a>
-    <a href="roadmap.html">Roadmap</a>
-    <a href="whitepaper.html">Whitepaper</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy.html">Privacy</a>
-  </nav>
+    <!-- Flash Footer with Social Links -->
+    <footer class="flash-footer">
+        <div class="social-links">
+            <a href="https://twitter.com/xbtcr" class="social-icon twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://t.me/xbtcr" class="social-icon telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://discord.gg/xbtcr" class="social-icon discord" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://medium.com/xbtcr" class="social-icon medium" target="_blank"><i class="fab fa-medium"></i></a>
+            <a href="https://github.com/xbtcr" class="social-icon github" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/company/xbtcr" class="social-icon linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p style="margin-top: 20px;">© 2023 XBTCR. All rights reserved.</p>
+    </footer>
 
-  <div class="center-logo">
-    <img src="xbtcr.png" alt="XBTCR Logo Center" />
-  </div>
+    <!-- JavaScript Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize particle.js background
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#4facfe"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 2,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#4facfe",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 1,
+                        "direction": "none",
+                        "random": true,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": true,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
 
-  <div class="main-content">
-    <h1>Welcome to XBTCR</h1>
-    <p>XBTCR is a decentralized cryptocurrency on Binance Smart Chain with 99% of its supply burned and 100% of its power in the hands of the community. No team wallet, no manipulation — only transparent, public trading and utility.</p>
+            // GSAP animations for logo
+            gsap.to("#animated-logo", {
+                duration: 2,
+                scale: 1.1,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
 
-    <a href="whitepaper.html" class="view-btn">
-      📄 View Whitepaper
-    </a>
-  </div>
+            // 3D coin animation
+            const coin = document.getElementById('3d-coin');
+            let rotation = 0;
+            
+            function rotateCoin() {
+                rotation += 1;
+                coin.style.transform = `rotateY(${rotation}deg)`;
+                requestAnimationFrame(rotateCoin);
+            }
+            
+            rotateCoin();
 
-  <footer>
-    <div class="social-links">
-      <a href="https://twitter.com/xbtcrtoken" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://t.me/xbtcrtoken" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
-      <a href="mailto:xbtcrtoken@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://xbtcr.github.io" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
-    </div>
-    <p style="margin-top: 10px;">&copy; 2025 XBTCR Token – All rights reserved.</p>
-  </footer>
-
+            // Button hover effects
+            const buttons = document.querySelectorAll('.flash-button');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    gsap.to(button, {
+                        duration: 0.3,
+                        scale: 1.05,
+                        boxShadow: "0 0 20px rgba(255, 165, 0, 0.5)",
+                        ease: "power2.out"
+                    });
+                });
+                
+                button.addEventListener('mouseleave', () => {
+                    gsap.to(button, {
+                        duration: 0.3,
+                        scale: 1,
+                        boxShadow: "none",
+                        ease: "power2.out"
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
