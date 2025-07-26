@@ -3,439 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XBTCR - Advanced Cryptocurrency Platform</title>
+    <title>XBTCR - Cryptocurrency Platform</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Base Styles */
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
             font-family: 'Arial', sans-serif;
             background-color: #0a0a1a;
             color: white;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        /* Flash Header Styles */
-        .flash-header {
+        /* Header with Left-Aligned Nav */
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 5%;
-            background: rgba(10, 10, 26, 0.8);
+            padding: 15px 5%;
+            background: rgba(10, 10, 26, 0.9);
             position: fixed;
-            width: 90%;
+            width: 100%;
             z-index: 100;
         }
 
-        /* Logo Container - Now supports both image and text */
-        .logo-container {
+        /* Logo Styles */
+        .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
         }
 
         .logo-img {
-            height: 50px;
-            animation: logoPulse 2s infinite alternate;
+            height: 40px;
+            animation: pulse 2s infinite;
         }
 
-        @keyframes logoPulse {
-            0% { transform: scale(1); opacity: 0.8; }
-            100% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 10px gold); }
-        }
-
-        /* Golden XBTCR Text Logo */
-        .xbtcr-logo {
-            font-size: 2.5rem;
+        .logo-text {
+            font-size: 1.8rem;
             font-weight: bold;
             background: linear-gradient(90deg, #D4AF37, #F9D423);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-            animation: goldGlow 2s infinite alternate;
         }
 
-        @keyframes goldGlow {
-            0% { text-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
-            100% { text-shadow: 0 0 20px rgba(249, 212, 35, 0.8), 
-                          0 0 30px rgba(212, 175, 55, 0.6); }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
         }
 
-        /* Navigation Buttons */
-        .flash-nav {
+        /* Navigation */
+        nav {
             display: flex;
-            gap: 20px;
-            align-items: center;
+            gap: 15px;
         }
 
         .nav-btn {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
+            padding: 8px 15px;
             border-radius: 5px;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
 
         .nav-btn:hover {
             background: rgba(79, 172, 254, 0.2);
-            animation: navFlash 0.5s;
         }
 
-        @keyframes navFlash {
-            0%, 100% { box-shadow: 0 0 5px rgba(79, 172, 254, 0); }
-            50% { box-shadow: 0 0 15px rgba(79, 172, 254, 0.7); }
+        /* Main Content */
+        main {
+            padding-top: 80px;
+            min-height: 100vh;
         }
 
-        .next-page-btn {
-            background: linear-gradient(45deg, #4facfe, #00f2fe);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            animation: pulse 2s infinite;
-            text-decoration: none;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        /* Main Content Styles - White Center */
-        .flash-main {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+        .hero {
             background-color: white;
             color: #0a0a1a;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .particle-background {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            opacity: 0.3;
-        }
-
-        .hero-content {
+            padding: 100px 5%;
             text-align: center;
-            z-index: 10;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
-        .coin-animation {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 40px;
+        .coin {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
             background: radial-gradient(circle, #f5d742, #e6b422);
             border-radius: 50%;
-            box-shadow: 0 0 30px #f5d742;
-            animation: coinRotate 5s infinite linear, coinGlow 2s infinite alternate;
+            animation: rotate 5s infinite linear;
         }
 
-        @keyframes coinRotate {
+        @keyframes rotate {
             from { transform: rotateY(0deg); }
             to { transform: rotateY(360deg); }
         }
 
-        @keyframes coinGlow {
-            0% { box-shadow: 0 0 20px #f5d742; }
-            100% { box-shadow: 0 0 50px #f5d742; }
-        }
-
-        /* Orange CTA Buttons */
-        .cta-buttons {
+        /* Buttons */
+        .buttons {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 20px;
+            margin-top: 50px;
         }
 
-        .flash-button {
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.1rem;
+        .btn {
+            padding: 12px 25px;
+            border-radius: 30px;
             font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: none;
+            text-decoration: none;
+            transition: all 0.3s;
         }
 
-        .buy-now-btn {
+        .btn-buy {
             background: linear-gradient(45deg, #FF8C00, #FFA500);
             color: white;
-            animation: orangeFlash 1.5s infinite;
         }
 
-        @keyframes orangeFlash {
-            0%, 100% { box-shadow: 0 0 10px rgba(255, 140, 0, 0.5); }
-            50% { box-shadow: 0 0 30px rgba(255, 165, 0, 0.8); }
-        }
-
-        .whitepaper-btn {
-            background: transparent;
-            color: #FF8C00;
+        .btn-wp {
             border: 2px solid #FF8C00;
-            animation: orangeBorderFlash 3s infinite;
+            color: #FF8C00;
         }
 
-        @keyframes orangeBorderFlash {
-            0%, 70%, 100% { border-color: #FF8C00; box-shadow: 0 0 0 rgba(255, 140, 0, 0); }
-            20%, 50% { border-color: #FFA500; box-shadow: 0 0 15px rgba(255, 165, 0, 0.6); }
+        /* Sections */
+        .section {
+            padding: 80px 5%;
+            min-height: 100vh;
+            display: none;
         }
 
-        /* Flash Footer Styles */
-        .flash-footer {
+        .section.active {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 10, 26, 0.9);
             padding: 30px 5%;
             text-align: center;
-            background: rgba(10, 10, 26, 0.8);
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
         }
 
         .social-icon {
             color: white;
-            font-size: 1.5rem;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
-            text-decoration: none;
+            transition: all 0.3s;
         }
 
         .social-icon:hover {
-            transform: translateY(-5px);
-        }
-
-        .twitter { background: #1DA1F2; }
-        .telegram { background: #0088cc; }
-        .discord { background: #5865F2; }
-        .medium { background: #00ab6c; }
-        .github { background: #333; }
-        .linkedin { background: #0077b5; }
-
-        .social-icon:hover::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            animation: socialFlash 0.5s;
-        }
-
-        @keyframes socialFlash {
-            0% { box-shadow: 0 0 0 rgba(255, 255, 255, 0.8); }
-            100% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <!-- Flash Header with Logo Image and Golden Text -->
-    <header class="flash-header">
-        <div class="logo-container">
-            <!-- Replace 'xbtcr-logo.png' with your actual logo image file -->
+    <!-- Header -->
+    <header>
+        <div class="logo">
             <img src="xbtcr-logo.png" alt="XBTCR Logo" class="logo-img">
-            <div class="xbtcr-logo" id="animated-logo">XBTCR</div>
+            <div class="logo-text">XBTCR</div>
         </div>
-        <nav class="flash-nav">
-            <a href="https://example.com/home" class="nav-btn" target="_blank">Home</a>
-            <a href="https://example.com/about" class="nav-btn" target="_blank">About</a>
-            <a href="https://example.com/features" class="nav-btn" target="_blank">Features</a>
-            <a href="https://example.com/roadmap" class="nav-btn" target="_blank">Roadmap</a>
-            <a href="https://example.com/team" class="nav-btn" target="_blank">Team</a>
-            <a href="https://example.com/contact" class="nav-btn" target="_blank">Contact</a>
-            <a href="https://example.com/next" class="next-page-btn" target="_blank">Next Page <i class="fas fa-arrow-right"></i></a>
+        <nav>
+            <a href="#home" class="nav-btn" onclick="showSection('home')">Home</a>
+            <a href="#about" class="nav-btn" onclick="showSection('about')">About</a>
+            <a href="#features" class="nav-btn" onclick="showSection('features')">Features</a>
+            <a href="#roadmap" class="nav-btn" onclick="showSection('roadmap')">Roadmap</a>
+            <a href="#team" class="nav-btn" onclick="showSection('team')">Team</a>
+            <a href="#contact" class="nav-btn" onclick="showSection('contact')">Contact</a>
         </nav>
     </header>
 
-    <!-- Main Flash Content -->
-    <main class="flash-main">
-        <div class="particle-background" id="particles-js"></div>
-        <div class="hero-content">
-            <div class="coin-animation" id="3d-coin"></div>
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero active">
+            <div class="coin"></div>
             <h1>Welcome to XBTCR</h1>
-            <p>The premium cryptocurrency platform with golden standards and flash transactions.</p>
-            <div class="cta-buttons">
-                <button class="buy-now-btn flash-button">Buy Now</button>
-                <button class="whitepaper-btn flash-button">Whitepaper</button>
+            <p>The future of cryptocurrency trading</p>
+            <div class="buttons">
+                <a href="https://example.com/buy" class="btn btn-buy" target="_blank">Buy Now</a>
+                <a href="whitepaper.pdf" class="btn btn-wp" target="_blank">Whitepaper</a>
             </div>
-        </div>
+        </section>
+
+        <!-- Other Sections -->
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>Information about XBTCR...</p>
+        </section>
+
+        <section id="features" class="section">
+            <h2>Features</h2>
+            <p>Our platform features...</p>
+        </section>
+
+        <section id="roadmap" class="section">
+            <h2>Roadmap</h2>
+            <p>Our development plan...</p>
+        </section>
+
+        <section id="team" class="section">
+            <h2>Our Team</h2>
+            <p>Meet our experts...</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Get in touch...</p>
+        </section>
     </main>
 
-    <!-- Flash Footer with Social Links -->
-    <footer class="flash-footer">
+    <!-- Footer -->
+    <footer>
         <div class="social-links">
-            <a href="https://twitter.com/xbtcr" class="social-icon twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://t.me/xbtcr" class="social-icon telegram" target="_blank"><i class="fab fa-telegram"></i></a>
-            <a href="https://discord.gg/xbtcr" class="social-icon discord" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://medium.com/xbtcr" class="social-icon medium" target="_blank"><i class="fab fa-medium"></i></a>
-            <a href="https://github.com/xbtcr" class="social-icon github" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/company/xbtcr" class="social-icon linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon" style="background: #1DA1F2;"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" style="background: #0088cc;"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="social-icon" style="background: #5865F2;"><i class="fab fa-discord"></i></a>
+            <a href="#" class="social-icon" style="background: #00ab6c;"><i class="fab fa-medium"></i></a>
         </div>
-        <p style="margin-top: 20px;">© 2023 XBTCR. All rights reserved.</p>
+        <p>© 2023 XBTCR. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript Files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize particle.js background
-            particlesJS('particles-js', {
-                "particles": {
-                    "number": {
-                        "value": 80,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": "#4facfe"
-                    },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": {
-                            "width": 0,
-                            "color": "#000000"
-                        }
-                    },
-                    "opacity": {
-                        "value": 0.5,
-                        "random": true,
-                        "anim": {
-                            "enable": true,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 3,
-                        "random": true,
-                        "anim": {
-                            "enable": true,
-                            "speed": 2,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#4facfe",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 1,
-                        "direction": "none",
-                        "random": true,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": {
-                            "enable": true,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "grab"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "push"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": {
-                            "distance": 140,
-                            "line_linked": {
-                                "opacity": 1
-                            }
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        }
-                    }
-                },
-                "retina_detect": true
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section, .hero').forEach(section => {
+                section.classList.remove('active');
             });
-
-            // GSAP animations for logo
-            gsap.to("#animated-logo", {
-                duration: 2,
-                scale: 1.1,
-                repeat: -1,
-                yoyo: true,
-                ease: "power1.inOut"
-            });
-
-            // 3D coin animation
-            const coin = document.getElementById('3d-coin');
-            let rotation = 0;
             
-            function rotateCoin() {
-                rotation += 1;
-                coin.style.transform = `rotateY(${rotation}deg)`;
-                requestAnimationFrame(rotateCoin);
+            // Show selected section
+            const section = document.getElementById(sectionId);
+            if(section) {
+                section.classList.add('active');
             }
             
-            rotateCoin();
+            // Update URL
+            history.pushState(null, null, `#${sectionId}`);
+        }
 
-            // Button hover effects
-            const buttons = document.querySelectorAll('.flash-button');
-            buttons.forEach(button => {
-                button.addEventListener('mouseenter', () => {
-                    gsap.to(button, {
-                        duration: 0.3,
-                        scale: 1.05,
-                        boxShadow: "0 0 20px rgba(255, 165, 0, 0.5)",
-                        ease: "power2.out"
-                    });
-                });
-                
-                button.addEventListener('mouseleave', () => {
-                    gsap.to(button, {
-                        duration: 0.3,
-                        scale: 1,
-                        boxShadow: "none",
-                        ease: "power2.out"
-                    });
-                });
-            });
+        // Show home section by default
+        document.addEventListener('DOMContentLoaded', function() {
+            if(!window.location.hash) {
+                showSection('home');
+            } else {
+                showSection(window.location.hash.substring(1));
+            }
         });
     </script>
 </body>
