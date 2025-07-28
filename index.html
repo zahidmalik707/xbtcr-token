@@ -3,340 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XBTCR - Cryptocurrency Platform</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Base Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #0a0a1a;
-            color: #333;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Header */
-        header {
-            padding: 20px 5%;
-            background: rgba(10, 10, 26, 0.9);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .nav-btn {
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-        .nav-btn:hover {
-            background: rgba(79, 172, 254, 0.2);
-        }
-
-        /* Main Content Area */
-        .main-content {
-            background-color: white;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 5%;
-            text-align: center;
-        }
-
-        /* Perfectly Centered Logo */
-        .logo-center-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-        }
-
-        .logo-container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 50%;
-            border: 15px solid white;
-            box-shadow: 0 0 0 15px white;
-        }
-
-        .logo-circle {
-            width: 270px;
-            height: 270px;
-            background: white;
-            border-radius: 50%;
-            border: 9px solid #D4AF37;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 35px rgba(255, 255, 255, 0.7);
-            animation: 
-                rotate-coin 5s infinite linear,
-                pulse 3s infinite ease-in-out;
-        }
-
-        .logo-text {
-            font-size: 3.75rem;
-            font-weight: bold;
-            color: #D4AF37;
-        }
-
-        /* Introduction Text */
-        .intro-text {
-            max-width: 800px;
-            margin: 40px auto;
-            color: #333;
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-
-        @keyframes rotate-coin {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(360deg); }
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.5); }
-            50% { box-shadow: 0 0 50px rgba(255, 255, 255, 0.9); }
-            100% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.5); }
-        }
-
-        /* Action Buttons */
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .btn {
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 1.1rem;
-        }
-
-        .btn-buy {
-            background: linear-gradient(45deg, #FF8C00, #FFA500);
-            color: white;
-        }
-
-        .btn-wp {
-            border: 2px solid #FF8C00;
-            color: #FF8C00;
-        }
-
-        /* Sections */
-        .section {
-            padding: 120px 5%;
-            min-height: 100vh;
-            display: none;
-            background-color: #0a0a1a;
-            color: white;
-        }
-
-        .active {
-            display: block;
-        }
-
-        /* Footer */
-        footer {
-            background: rgba(10, 10, 26, 0.9);
-            padding: 40px 5%;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .social-icon {
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            transition: transform 0.3s;
-        }
-
-        .social-icon:hover {
-            transform: scale(1.1);
-        }
-
-        .copyright {
-            margin-top: 30px;
-            font-size: 0.9rem;
-        }
-
-        /* WhatsApp Live Chat */
-        .whatsapp-chat {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 99;
-        }
-
-        .whatsapp-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            border-radius: 50%;
-            color: white;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: all 0.3s;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
-        }
-    </style>
+    <title>XBTCR - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header with Navigation -->
-    <header>
+    <div class="container-3d">
+        <!-- Navbar -->
         <nav>
-            <a href="#home" class="nav-btn" onclick="showSection('home')">Home</a>
-            <a href="#about" class="nav-btn" onclick="showSection('about')">About</a>
-            <a href="#features" class="nav-btn" onclick="showSection('features')">Features</a>
-            <a href="#roadmap" class="nav-btn" onclick="showSection('roadmap')">Roadmap</a>
-            <a href="#team" class="nav-btn" onclick="showSection('team')">Team</a>
-            <a href="#contact" class="nav-btn" onclick="showSection('contact')">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        <section id="home" class="main-content active">
-            <!-- Perfectly Centered Logo -->
-            <div class="logo-center-container">
-                <div class="logo-container">
-                    <div class="logo-circle">
-                        <div class="logo-text">XBTCR</div>
-                    </div>
-                </div>
-                
-                <!-- Introduction Text -->
-                <div class="intro-text">
-                    <p>XBTCR is a revolutionary cryptocurrency platform designed to provide secure, fast, and decentralized financial solutions. Our mission is to bridge traditional finance with blockchain technology, offering users a seamless experience for trading, staking, and managing digital assets.</p>
-                    <p>With cutting-edge technology and a transparent approach, XBTCR aims to become a leader in the crypto space, empowering users with financial freedom and innovative tools for wealth generation.</p>
-                </div>
-                
-                <!-- Action Buttons -->
-                <div class="action-buttons">
-                    <a href="https://pancakeswap.finance/swap?outputCurrency=0x4274c09719F4eb538682F74DB27f7DB6DE330cd9" 
-                       class="btn btn-buy" 
-                       target="_blank">Buy Now</a>
-                    <a href="whitepaper.pdf" class="btn btn-wp" target="_blank">Whitepaper</a>
-                </div>
+            <div class="logo">XBTCR</div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="tokenomics.html">Tokenomics</a>
+                <a href="whitepaper.html">Whitepaper</a>
+                <a href="roadmap.html">Roadmap</a>
+                <a href="contact.html">Contact</a>
+                <a href="#" class="buy-btn">Buy XBTCR</a>
             </div>
-        </section>
+        </nav>
 
-        <!-- Other Sections -->
-        <section id="about" class="section">
-            <h2>About XBTCR</h2>
-            <p>XBTCR is a decentralized BEP-20 token designed to bring real utility to the DeFi ecosystem. Built on Binance Smart Chain, XBTCR focuses on simplicity, transparency, and accessibility. Our mission is to create a fair and open financial tool that empowers the community. With a fixed total supply and a transparent burn mechanism, XBTCR ensures long-term value and reduced inflation. The project is community-driven with no central control, no presale, and no private investors. All tokens are launched fairly on PancakeSwap, and 99% of the total supply is permanently burned to build trust. Whether you're new to crypto or a seasoned trader, XBTCR is built for you. Buy, hold, and earn while we build tools and apps to expand the ecosystem.</p>
-        </section>
-
-        <section id="features" class="section">
-            <h2>Features</h2>
-            <p>Platform features...</p>
-        </section>
-
-        <section id="roadmap" class="section">
-            <h2>Roadmap</h2>
-            <p>Development timeline...</p>
-        </section>
-
-        <section id="team" class="section">
-            <h2>Our Team</h2>
-            <p>Team members...</p>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <p>Contact information...</p>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="social-links">
-            <a href="https://t.me/xbtcr_bsc" class="social-icon" style="background: #0088cc;" target="_blank"><i class="fab fa-telegram"></i></a>
-            <a href="#" class="social-icon" style="background: #1DA1F2;" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon" style="background: #5865F2;" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="#" class="social-icon" style="background: #FF0000;" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="social-icon" style="background: #E1306C;" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon" style="background: #1877F2;" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon" style="background: #0A66C2;" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="social-icon" style="background: #333;" target="_blank"><i class="fab fa-github"></i></a>
+        <!-- Main Logo Center -->
+        <div class="main-logo">
+            <h1>XBTCR</h1>
         </div>
-        <p class="copyright">© 2023 XBTCR. All rights reserved.</p>
-    </footer>
 
-    <!-- WhatsApp Live Chat -->
-    <div class="whatsapp-chat">
-        <a href="https://wa.me/yourphonenumber" class="whatsapp-btn" target="_blank">
+        <!-- Whitepaper and Buy Now Section -->
+        <div class="whitepaper-buy">
+            <a href="whitepaper.html" class="btn">Read Whitepaper</a>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-section">
+            <h2>Revolutionizing Crypto Trading</h2>
+            <p>XBTCR is a next-generation cryptocurrency platform offering secure, fast, and decentralized trading solutions with advanced tokenomics.</p>
+            <!-- Add more content as needed -->
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-medium"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2023 XBTCR. All rights reserved.</p>
+        </footer>
+
+        <!-- WhatsApp Live Chat -->
+        <a href="https://wa.me/yournumber" class="whatsapp-chat">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.section, .main-content').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Show selected section
-            document.getElementById(sectionId).classList.add('active');
-            
-            // Update URL
-            history.pushState(null, null, `#${sectionId}`);
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            if(window.location.hash) {
-                showSection(window.location.hash.substring(1));
-            }
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
