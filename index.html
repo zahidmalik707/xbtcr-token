@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XBTCR - Home</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav>
-        <div class="logo">XBTCR</div>
+        <div class="logo">
+            <img src="assets/logo.png" alt="XBTCR Logo" id="nav-logo">
+        </div>
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
@@ -23,22 +25,18 @@
         </div>
     </nav>
 
-    <!-- Main Logo Center -->
-    <div class="main-logo">
-        <div class="logo-circle">
-            <!-- Replace with your logo image or keep as is -->
-            <span style="font-size: 3rem; color: var(--gold);">X</span>
-        </div>
-        <h1>XBTCR</h1>
+    <!-- Flashing Main Logo -->
+    <div class="flashing-logo-container">
+        <img src="assets/logo.png" alt="XBTCR Logo" id="flashing-logo">
     </div>
 
     <!-- Main Content -->
     <div class="content-section">
-        <h2 class="section-title">Revolutionizing Crypto Trading</h2>
-        <p style="max-width: 800px; margin: 0 auto; line-height: 1.6; font-size: 1.1rem;">
-            XBTCR is a premium cryptocurrency platform offering secure, fast, and decentralized trading solutions. 
-            Our golden standard in crypto trading ensures top-tier security and profitability for our users.
-        </p>
+        <h2>REVOLUTIONARY CRYPTO PLATFORM</h2>
+        <div class="whitepaper-buy">
+            <a href="whitepaper.html" class="btn">WHITEPAPER</a>
+            <a href="#" class="buy-btn">BUY NOW</a>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -48,27 +46,13 @@
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-discord"></i></a>
             <a href="#"><i class="fab fa-medium"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="whatsapp-chat">
+            <a href="https://wa.me/yournumber"><i class="fab fa-whatsapp"></i> Live Chat</a>
         </div>
         <p>&copy; 2023 XBTCR. All rights reserved.</p>
     </footer>
 
-    <!-- WhatsApp Live Chat -->
-    <a href="https://wa.me/yournumber" class="whatsapp-chat">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <script>
-        // Simple script to handle mobile menu if needed
-        document.addEventListener('DOMContentLoaded', function() {
-            // Highlight current page in navigation
-            const currentPage = location.pathname.split('/').pop();
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
