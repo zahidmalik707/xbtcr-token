@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>XBTCR Price Impact Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #111;
+      color: #fff;
+    }
+    h2 {
+      color: #00ffcc;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    button {
+      background-color: #00cc88;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .result {
+      margin-top: 20px;
+      background-color: #222;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>💹 XBTCR Price Impact Calculator</h2>
+
+  <label>Current XBTCR Price ($):</label>
+  <input type="number" id="price" placeholder="e.g. 0.0000534" step="any">
+
+  <label>Total Liquidity ($):</label>
+  <input type="number" id="liquidity" placeholder="e.g. 500" step="any">
+
+  <label>Buy Amount ($):</label>
+  <input type="number" id="buy" placeholder="e.g. 100" step="any">
+
+  <button onclick="calculateImpact()">Calculate New Price</button>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    function calculateImpact() {
+      const price = parseFloat(document.getElementById("price").value);
+      const liquidity = parseFloat(document.getElementById("liquidity").value);
+      const buy = parseFloat(document.getElementById("buy").value);
+
+      if (isNaN(price) || isNaN(liquidity) || isNaN(buy) || liquidity === 0) {
+        document.getElementById("result").innerHTML = "❌ Please enter valid numbers.";
+        return;
+      }
+
+      const percentIncrease = buy / (liquidity / 2); // only one side (WBNB)
+      const newPrice = price * (1 + percentIncrease);
+
+      document.getElementById("result").innerHTML = `
+        <strong>Estimated New Price:</strong><br>
+        $${newPrice.toFixed(8)}<br><br>
+        <strong>Price Increase:</strong><br>
+        ${(percentIncrease * 100).toFixed(2)}%
+      `;
+    }
+  </script>
+</body>
+</html>
